@@ -2,46 +2,31 @@
 package main
 
 import (
-	"assignment3/operations"
+	"assignment3/calculator"
 	"fmt"
+	"strings"
 )
 
 func main() {
 
-	var userNum1, userNum2, operation, result, remainder int
-	var operationType string
+	isCalculatorOn := true
+	var calUse string
 
-	fmt.Println("enter the first number: ")
-	fmt.Scanln(&userNum1)
+	fmt.Println("Welcome to the assignment 3 calculator!")
 
-	fmt.Println("enter the second number: ")
-	fmt.Scanln(&userNum2)
+	for isCalculatorOn {
 
-	fmt.Println("What operation do you want to perform?\n Type 1 for addition\n Type 2 for subtraction\n Type 3 for multiplication\n Type 4 for division")
-	fmt.Scanln(&operation)
+		calculator.Calc()
 
-	if operation == 1 {
-		result = operations.Add(userNum1, userNum2)
-		operationType = "Addition"
-	} else if operation == 2 {
-		result = operations.Sub(userNum1, userNum2)
-		operationType = "Subtraction"
-	} else if operation == 3 {
-		result = operations.Mul(userNum1, userNum2)
-		operationType = "Multiplication"
-	} else if operation == 4 {
-		result, remainder = operations.Div(userNum1, userNum2)
-		operationType = "Division"
-	} else {
-		fmt.Println("Operation not supported. Please try again.")
+		fmt.Println("Do you want to continue using the calculator (Y/N)")
+		fmt.Scanln(&calUse)
+		calUse = strings.ToUpper(calUse)
+
+		if calUse == "Y" {
+			fmt.Println("Please continue using the calculator")
+		} else {
+			fmt.Println("Exiting the calculator...")
+			isCalculatorOn = false
+		}
 	}
-
-	if operation == 1 || operation == 2 || operation == 3 {
-		fmt.Println("You performed", operationType, ", the Result is: ", result)
-	} else if operation == 4 {
-		fmt.Println("You performed", operationType, "the Result is: ", result, "and the Remainder is: ", remainder)
-	} else {
-		fmt.Println("Exiting...")
-	}
-
 }
