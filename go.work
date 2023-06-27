@@ -2,7 +2,7 @@ go 1.20
 
 use (
 	./assignment1
-	./assignment2
+	./assignment2	
 	./pkg1
 	./assignment3
 )
