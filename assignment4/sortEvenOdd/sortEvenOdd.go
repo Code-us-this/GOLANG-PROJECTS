@@ -29,6 +29,6 @@ func PrintResult() {
 	var slice []int
 	evenSlice, oddSlice := sortEvenOdd(userinput.CreateAnIntSlice(slice))
 
-	fmt.Println("The slice with even numbers is:", evenSlice, "\nThe slice with odd numbers is:", oddSlice)
+	fmt.Println("\nThe slice with even numbers is:", evenSlice, "\nThe slice with odd numbers is:", oddSlice)
 
 }

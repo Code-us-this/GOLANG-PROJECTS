@@ -43,6 +43,6 @@ func findDuplicates(sl []int) map[int]int {
 func PrintResult() {
 
 	var slice []int
-	fmt.Println("This map contains key value pairs of duplicated numbers in the format of {number: count}: ", findDuplicates(userinput.CreateAnIntSlice(slice)))
+	fmt.Println("\nThis map contains key value pairs of duplicated numbers in the format of {number: count}: ", findDuplicates(userinput.CreateAnIntSlice(slice)))
 
 }
