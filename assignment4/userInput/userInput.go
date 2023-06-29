@@ -1,5 +1,5 @@
-// Package userslice helps scanning user input and convert it into a Slice
-package userslice
+// Package userinput helps scanning user input
+package userinput
 
 import (
 	"bufio"
@@ -16,9 +16,9 @@ func CreateAnIntSlice(sl []int) []int {
 
 	fmt.Println("Enter elements of the slice (Seperated by spaces): ")
 	reader.Scan()
-	userInput := strings.Split(reader.Text(), " ")
+	input := strings.Split(reader.Text(), " ")
 
-	for _, i := range userInput {
+	for _, i := range input {
 		num, err := strconv.Atoi(i)
 		if err != nil {
 			fmt.Printf("Error in converting '%s' to int: %v\n", i, err)

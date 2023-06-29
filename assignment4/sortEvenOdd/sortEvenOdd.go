@@ -2,7 +2,7 @@
 package sortevenodd
 
 import (
-	userslice "assignment4/userSlice"
+	userinput "assignment4/userInput"
 	"fmt"
 )
 
@@ -27,7 +27,7 @@ func sortEvenOdd(s []int) (e []int, o []int) {
 func PrintResult() {
 
 	var slice []int
-	evenSlice, oddSlice := sortEvenOdd(userslice.CreateAnIntSlice(slice))
+	evenSlice, oddSlice := sortEvenOdd(userinput.CreateAnIntSlice(slice))
 
 	fmt.Println("The slice with even numbers is:", evenSlice, "\nThe slice with odd numbers is:", oddSlice)
 

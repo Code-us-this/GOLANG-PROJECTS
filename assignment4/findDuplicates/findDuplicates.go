@@ -2,7 +2,7 @@
 package findduplicates
 
 import (
-	userslice "assignment4/userSlice"
+	userinput "assignment4/userInput"
 	"fmt"
 )
 
@@ -17,7 +17,7 @@ func findDuplicates(sl []int) map[int]int {
 
 		m[j]++
 
-		// 👇👇👇Alternative version which works for all test cases.
+		// 👇👇👇Alternative version which works too.
 
 		// _, exist := m[j]
 
@@ -43,6 +43,6 @@ func findDuplicates(sl []int) map[int]int {
 func PrintResult() {
 
 	var slice []int
-	fmt.Println("This map contains key value pairs of duplicated numbers in the format of {number: count}: ", findDuplicates(userslice.CreateAnIntSlice(slice)))
+	fmt.Println("This map contains key value pairs of duplicated numbers in the format of {number: count}: ", findDuplicates(userinput.CreateAnIntSlice(slice)))
 
 }
