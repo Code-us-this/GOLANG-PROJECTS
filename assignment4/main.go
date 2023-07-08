@@ -2,6 +2,7 @@
 package main
 
 import (
+	findcharacterindex "assignment4/findCharacterIndex"
 	findduplicates "assignment4/findDuplicates"
 	palindromecheck "assignment4/palindromeCheck"
 	sortevenodd "assignment4/sortEvenOdd"
@@ -33,6 +34,9 @@ func main() {
 		case "3":
 			// call to create a string and check if the given input is a palindrome or not.
 			palindromecheck.Palindromecheck()
+		case "4":
+			// call to create a string, find and print middle index of the given character of a string.
+			findcharacterindex.FindCharacterIndex()
 		default:
 			fmt.Println("\nPut on some glasses and try again!")
 		}

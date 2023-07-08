@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./Grokking-Algorithms
 	./assignment1
 	./assignment2
 	./assignment3
